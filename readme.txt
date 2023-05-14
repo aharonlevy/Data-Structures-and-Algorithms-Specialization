@@ -1,0 +1,1 @@
+This repo contains my solutions for the University of California San Diego Data Structures and Algorithms Specialization.
