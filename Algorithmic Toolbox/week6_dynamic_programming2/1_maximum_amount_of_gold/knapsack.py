@@ -26,7 +26,6 @@ def maximum_gold(capacity, weights):
                     cur_best[0]
                     < optimal_sums[row][cul - cur_weight][0] + weights[row - 1]
                 ) and optimal_sums[row][cul - cur_weight][1] is False:
-                    print("# adding:", weights[row - 1], " in row:", row, " cul:", cul)
                     optimal_sums[row][cul] = [
                         optimal_sums[row][cul - cur_weight][0] + weights[row - 1],
                         True,
