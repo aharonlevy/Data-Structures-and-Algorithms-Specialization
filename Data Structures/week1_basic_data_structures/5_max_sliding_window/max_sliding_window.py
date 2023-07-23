@@ -1,6 +1,27 @@
 # python3
 from collections import deque
 
+"""
+Sliding Window Maximum
+
+Finds the maximum element in sliding windows of a given size in a sequence.
+
+Functions:
+    max_sliding_window_naive(sequence, m): Naive approach for finding max element in each window.
+    max_sliding_window_fast(sequence, m): Optimized approach using a deque for finding max element.
+
+Usage:
+    - Define input sequence as a list of integers.
+    - Set window size.
+    - Call `max_sliding_window_fast(sequence, m)`.
+    - Returns list with max element in each sliding window.
+
+Example:
+    input_sequence = [0, 0, 0, 0, 3, 4, 5]
+    window_size = 3
+    print(*max_sliding_window_fast(input_sequence, window_size))
+"""
+
 
 def max_sliding_window_naive(sequence, m):
     maximums = []
@@ -11,6 +32,17 @@ def max_sliding_window_naive(sequence, m):
 
 
 def max_sliding_window_fast(sequence, m):
+    """
+    Finds the maximum element in each sliding window of size m in the given sequence.
+
+    Args:
+        sequence (list): The input sequence of integers.
+        m (int): The size of the sliding window.
+
+    Returns:
+        list: A list containing the maximum element in each sliding window.
+
+    """
     values_deque = deque()
     maximums = []
     counter = 0
